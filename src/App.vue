@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="font-montserrat bg-gray-50 h-screen flex flex-col">
+    <ClinicHeader />
+    <div class="flex-1 p-24">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ClinicHeader from '@/components/ClinicHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ClinicHeader,
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style scoped></style>
